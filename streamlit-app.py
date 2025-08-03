@@ -15,7 +15,7 @@ from pandasai import SmartDataframe as sdf
 from pandasai.llm.openai import OpenAI
 import html
 
-
+# Key and Model
 enable_key = st.sidebar.text_input("OpenAI API Key", type="password")
 model_options = ["gpt-4", "gpt-4o", "gpt-4o-mini", "gpt-3.5-turbo"]
 your_model = st.sidebar.selectbox("Choose a LLM model", model_options, index=0)
@@ -89,16 +89,16 @@ df['Sales'] = round(df['Sales'],0)
 df["Profit"] = round(df["Profit"], 2)
 # df.head()
 
+
+# Columns 
 left_col, _, right_col = st.columns([1, 0.1, 2]) 
-
-
 
 with left_col: 
     # Compute aggregates
     total_sales = df["Sales"].sum()
     total_profit = df["Profit"].sum()
     
-    # Optional: inject CSS to make the boxes and numbers bigger / dashboard-like
+    # Inject CSS to make the boxes and numbers bigger / dashboard-like
     st.markdown("""
     <style>
     .kpi-container { display: flex; gap: 1rem; margin-bottom: 0.5rem; }
@@ -116,7 +116,6 @@ with left_col:
     """, unsafe_allow_html=True)
     
     # Render the KPIs side by side
-    
     st.markdown(
         f"""
     <div class="kpi-container">
@@ -136,8 +135,6 @@ with left_col:
     )
     
 
-
-    
     st.markdown("             ")
     st.markdown("<h6 style='text-align: center;'>-------------------------- Raw Data Preview ---------------------------</h6>", unsafe_allow_html=True)
     all_markets = df["Market"].unique()
@@ -156,6 +153,7 @@ with left_col:
                         )
                     }
                  )
+
 
 with right_col:
     
