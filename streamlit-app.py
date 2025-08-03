@@ -7,8 +7,7 @@ import io, hashlib
 import streamlit as st
 import pandas as pd
 import json
-import matplotlib
-matplotlib.use("Agg")
+
 import matplotlib.pyplot as plt
 plt.ioff()
 #from openai import OpenAI as OpenAIClient 
