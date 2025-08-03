@@ -8,9 +8,6 @@ import streamlit as st
 import pandas as pd
 import json
 
-import matplotlib.pyplot as plt
-plt.ioff()
-#from openai import OpenAI as OpenAIClient 
 from pandasai import SmartDataframe as sdf
 from pandasai.llm.openai import OpenAI
 import html
