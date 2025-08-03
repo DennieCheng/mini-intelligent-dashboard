@@ -83,7 +83,7 @@ st.markdown(
 )
 
 # Load data
-df = pd.read_excel("FruitData.xls")
+df = pd.read_excel("FruitData.xlsx")
 df['Sales'] = round(df['Sales'],0)
 df["Profit"] = round(df["Profit"], 2)
 # df.head()
