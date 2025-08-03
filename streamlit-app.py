@@ -17,9 +17,10 @@ import html
 
 
 enable_key = st.sidebar.text_input("OpenAI API Key", type="password")
-your_model = st.sidebar.text_input("LLM")
+model_options = ["gpt-4", "gpt-4o", "gpt-4o-mini", "gpt-3.5-turbo"]
+your_model = st.sidebar.selectbox("Choose a LLM model", model_options, index=0)
 if not enable_key or not your_model:
-    st.warning("Enter your OpenAI API key and Model name")
+    st.warning("Enter your OpenAI API key and choose a model to run the dashboard...")
     st.stop()
 
 
