@@ -17,7 +17,7 @@ import html
 
 
 enable_key = st.sidebar.text_input("OpenAI API Key", type="password")
-your_model = st.sidebar.text_input("LLM", type="password")
+your_model = st.sidebar.text_input("LLM")
 if not enable_key or not your_model:
     st.warning("Enter your OpenAI API key and Model name")
     st.stop()
